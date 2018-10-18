@@ -21,4 +21,4 @@ Example: **JohnSmith_ MAPD711_Lab_Assignment3.zip**
 
 **Team:**
 1. Jose Filho - 301005491 - jaraujo8@my.centennialcollege.ca
-2. Oguz Bayral
+2. Oguz Bayral - 301029119 -obayral@my.centennialcollege.ca 
