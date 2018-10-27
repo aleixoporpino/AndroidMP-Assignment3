@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //hey
+
         /*CustomerDAO customerDAO = new CustomerDAO(this);
 
         Customer customer = customerDAO.login("admin","1223456");
