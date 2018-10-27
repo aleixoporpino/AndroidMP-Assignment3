@@ -7,7 +7,7 @@ public class Order implements Serializable {
     private Long orderId;
     private Long customerId;
     private Long itemId;
-    private Date orderDate;
+    private String orderDate;
     private Integer quantity;
     private String status;
 
@@ -35,11 +35,11 @@ public class Order implements Serializable {
         this.itemId = itemId;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 

@@ -1,8 +1,10 @@
 package centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Shoes;
 
 public class ShoesDAO extends SQLiteOpenHelper {
     public ShoesDAO(Context context) {
@@ -27,5 +29,34 @@ public class ShoesDAO extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public Shoes insert(Shoes shoes) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues data = new ContentValues();
+        data.put("itemName", shoes.getItemName());
+        data.put("category", shoes.getCategory());
+        data.put("shoeSize", shoes.getShoeSize());
+        data.put("price", shoes.getPrice());
+        shoes.setItemId(db.insert("Shoes", null, data));
+        if (shoes.getItemId() != -1) {
+            return shoes;
+        } else {
+            return null;
+        }
 
+    }
+
+    public void update(Shoes shoes) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues data = new ContentValues();
+        data.put("itemName", shoes.getItemName());
+        data.put("category", shoes.getCategory());
+        data.put("shoeSize", shoes.getShoeSize());
+        data.put("price", shoes.getPrice());
+        db.update("Shoes", data, "itemId = ?", new String[]{shoes.getItemId().toString()});
+    }
+
+    public void remove(Long id) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("Shoes", "itemId = ?", new String[]{id.toString()});
+    }
 }
