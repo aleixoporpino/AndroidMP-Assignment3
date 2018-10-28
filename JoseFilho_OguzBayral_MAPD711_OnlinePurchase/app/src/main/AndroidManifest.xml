@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".model.welcomeCustomer" />
-        <activity android:name=".model.welcomeCsr"></activity>
+        <activity android:name=".model.welcomeCsr" />
+        <activity android:name=".orderSubmit"></activity>
     </application>
 
 </manifest>

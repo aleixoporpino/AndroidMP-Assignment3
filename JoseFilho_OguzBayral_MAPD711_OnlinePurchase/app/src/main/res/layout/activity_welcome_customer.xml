@@ -102,7 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/men"
-            />
+            android:tag="men"
+            android:onClick="shoeTypeClick"/>
 
         <RadioButton
             android:id="@+id/radioWomen"
@@ -110,8 +111,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/women"
-
-            />
+            android:tag="women"
+            android:onClick="shoeTypeClick"/>
 
         <RadioButton
             android:id="@+id/radioKid"
@@ -119,7 +120,9 @@
             android:layout_height="wrap_content"
             android:text="@string/kid"
             android:layout_marginLeft="160px"
-            />
+            android:tag="kid"
+            android:onClick="shoeTypeClick"
+        />
 
     </RadioGroup>
 
@@ -131,7 +134,8 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="@string/selectDetails"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+    />
 
 
 
@@ -148,6 +152,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/small"
+            android:tag="small"
+            android:onClick="shoeSizeClick"
             />
 
         <RadioButton
@@ -156,8 +162,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/medium"
-
-            />
+            android:tag="medium"
+            android:onClick="shoeSizeClick"/>
 
         <RadioButton
             android:id="@+id/radioLarge"
@@ -165,9 +171,12 @@
             android:layout_height="wrap_content"
             android:text="@string/large"
             android:layout_marginLeft="110px"
-            />
+            android:tag="large"
+            android:onClick="shoeSizeClick"/>
 
     </RadioGroup>
+
+
 
 
     <TableRow
@@ -177,8 +186,8 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/button1"
-            android:text="@string/login"
-            android:onClick="login"
+            android:text="@string/order"
+            android:onClick="order"
             />
     </TableRow>
 

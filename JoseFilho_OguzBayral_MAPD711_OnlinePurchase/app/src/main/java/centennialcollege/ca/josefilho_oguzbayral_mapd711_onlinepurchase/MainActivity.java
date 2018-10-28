@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     CsrDAO csrDAO;
     CustomerDAO customerDAO;
     RadioGroup rg;
-    RadioButton rb;
     int loginType;
 
     @Override

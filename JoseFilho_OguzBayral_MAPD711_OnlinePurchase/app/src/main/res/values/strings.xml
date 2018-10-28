@@ -14,4 +14,6 @@
     <string name="medium">Medium</string>
     <string name="large">Large</string>
     <string name="selectDetails">Select Size and Quantity</string>
+    <string name="orders">Orders to Deliver</string>
+    <string name="orderdetails">Your Order Details</string>
 </resources>
