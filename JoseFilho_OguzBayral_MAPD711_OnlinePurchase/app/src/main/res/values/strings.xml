@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">JoseFilho_OguzBayral_MAPD711_OnlinePurchase</string>
+    <string name="welcome">Welcome to Happy Shopping!</string>
+    <string name="logincustomer">Login as Customer</string>
+    <string name="logincsr">Login as CSR</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="login">Log in</string>
+    <string name="order">Order</string>
+    <string name="men">Men</string>
+    <string name="women">Women</string>
+    <string name="kid">Kids</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="selectDetails">Select Size and Quantity</string>
 </resources>

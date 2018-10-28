@@ -1,9 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- TableLayout declaration-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.welcomeCustomer">
+    android:stretchColumns="1"
 
-</android.support.constraint.ConstraintLayout>
+    tools:context=".model.welcomeCustomer"
+    android:background="@android:color/holo_blue_light">
+
+    <!--Welcome Message -->
+
+    <ImageView
+        android:layout_width="354dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:scaleY="0.9"
+        android:src="@drawable/shoplogo" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/r1textView"
+            android:text="Dear, "
+            android:textSize="20dp"
+            android:layout_marginLeft="70px" />
+
+        <TextView
+            android:id="@+id/userFullName"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:layout_marginLeft="50px" />
+
+    </TableRow>
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_marginTop="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/welcome"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/shoes"
+        android:layout_marginTop="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Our Shoe Types:"
+        android:textSize="20dp"
+        />
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/menshoe" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="20dp"
+            android:scaleX="0.8"
+            android:src="@drawable/womenshoe" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kidshoe" />
+
+    </TableRow>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupshoe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40px">
+
+
+        <RadioButton
+            android:id="@+id/radioMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/men"
+            />
+
+        <RadioButton
+            android:id="@+id/radioWomen"
+            android:layout_marginLeft="150px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/women"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioKid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kid"
+            android:layout_marginLeft="160px"
+            />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/welcomee"
+        android:layout_marginTop="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/selectDetails"
+        android:textSize="20dp" />
+
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupsize"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40px">
+
+
+        <RadioButton
+            android:id="@+id/radioSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/small"
+            />
+
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_marginLeft="150px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medium"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/large"
+            android:layout_marginLeft="110px"
+            />
+
+    </RadioGroup>
+
+
+    <TableRow
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button1"
+            android:text="@string/login"
+            android:onClick="login"
+            />
+    </TableRow>
+
+
+</TableLayout>

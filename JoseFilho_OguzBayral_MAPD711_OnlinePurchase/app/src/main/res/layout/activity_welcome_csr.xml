@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- TableLayout declaration-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.welcomeCsr">
+    android:stretchColumns="1"
 
-</android.support.constraint.ConstraintLayout>
+    tools:context=".model.welcomeCsr"
+    android:background="@android:color/holo_blue_light">
+
+    <!--Welcome Message -->
+
+    <ImageView
+        android:layout_width="354dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/shoplogo" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_marginTop="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Welcome to Happy Shopping Login as CSR!"
+        android:textSize="20dp" />
+
+
+
+</TableLayout>
