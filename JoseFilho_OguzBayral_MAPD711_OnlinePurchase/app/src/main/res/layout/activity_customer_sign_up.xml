@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CustomerSignUp"
+        android:background="@android:color/holo_blue_light">
+
+    <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/new_costumer_sign_up"
+            android:textSize="20sp"/>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/user_name"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewFullName"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:id="@+id/txtUsername"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/password"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewPassword"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:id="@+id/txtPassword"
+                android:textSize="17sp">
+
+            <requestFocus/>
+        </EditText>
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/first_name"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewFirstName"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:id="@+id/txtFirstName"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/last_name"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewLastName"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:id="@+id/txtLastName"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/address"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewAddress"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:id="@+id/txtAddress"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/city"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewCity"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:id="@+id/txtCity"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingBottom="7sp"
+            android:layout_marginStart="10sp">
+
+        <TextView
+                android:text="@string/postal_code"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewPostalCode"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:id="@+id/txtPostalCode"
+                android:textSize="17sp"
+                />
+    </TableRow>
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+        <Button
+                android:text="@string/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnConfirmOrder"
+                android:onClick="signUp"/>
+    </TableRow>
+
+</TableLayout>
