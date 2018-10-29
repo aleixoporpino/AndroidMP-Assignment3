@@ -50,18 +50,43 @@
         android:textAlignment="center"
         android:text="@string/welcome"
         android:textSize="20dp"
-    />
+        />
 
 
     <TextView
-        android:id="@+id/orders"
+        android:id="@+id/orderdetails"
         android:layout_marginTop="30px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="@string/orders"
+        android:text="@string/orderdetails"
         android:textSize="20dp"
-        />
+    />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px">
+        <TextView
+            android:id="@+id/shoeType"
+            android:text="aa"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/shoeSize"
+            android:text="bb"
+            android:textSize="20dp"
+            android:layout_marginLeft="70px" />
+
+        <TextView
+            android:id="@+id/shoeQuantity"
+            android:text="cc"
+            android:textSize="20dp"
+         />
+
+    </TableRow>
 
 
 </TableLayout>

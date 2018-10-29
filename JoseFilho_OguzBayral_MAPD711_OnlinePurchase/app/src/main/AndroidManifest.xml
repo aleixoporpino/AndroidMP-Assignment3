@@ -18,10 +18,9 @@
         </activity>
         <activity android:name=".model.welcomeCustomer"/>
         <activity android:name=".model.welcomeCsr"/>
-        <activity android:name=".CustomerSignUp">
-        </activity>
-        <activity android:name=".CSRSignUp">
-        </activity>
+        <activity android:name=".CustomerSignUp"/>
+        <activity android:name=".CSRSignUp"/>
+        <activity android:name=".orderSubmit"/>
     </application>
 
 </manifest>

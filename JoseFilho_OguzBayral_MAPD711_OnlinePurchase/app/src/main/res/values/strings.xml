@@ -24,4 +24,6 @@
     <string name="new_costumer_sign_up">New customer sign up</string>
     <string name="customer_sign_up">Customer sign up</string>
     <string name="csr_sign_up">CSR sign up</string>
+    <string name="orders">Orders to Deliver</string>
+    <string name="orderdetails">Your Order Details</string>
 </resources>
