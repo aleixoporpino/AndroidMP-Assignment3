@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JoseFilho_OguzBayral_MAPD711_OnlinePurchase</string>
+    <string name="app_name">Online Purchase</string>
     <string name="welcome">Welcome to Happy Shopping!</string>
     <string name="logincustomer">Login as Customer</string>
     <string name="logincsr">Login as CSR</string>
@@ -14,9 +14,29 @@
     <string name="medium">Medium</string>
     <string name="large">Large</string>
     <string name="selectDetails">Select Size and Quantity</string>
+    <string name="sign_up">Sign up</string>
+    <string name="user_name">User name:</string>
+    <string name="first_name">First name:</string>
+    <string name="last_name">Last name:</string>
+    <string name="address">Address:</string>
+    <string name="city">City:</string>
+    <string name="postal_code">Postal code:</string>
+    <string name="new_costumer_sign_up">New customer sign up</string>
+    <string name="customer_sign_up">Customer sign up</string>
+    <string name="csr_sign_up">CSR sign up</string>
     <string name="orders">Orders to Deliver</string>
     <string name="orderdetails">Your Order Details</string>
+<<<<<<< HEAD
     <string name="pieces">pieces of</string>
     <string name="size">size</string>
     <string name="shoe">shoe</string>
+=======
+    <string name="name">Name:</string>
+    <string name="category">Category:</string>
+    <string name="size">Size:</string>
+    <string name="price">Price:</string>
+    <string name="save">Save</string>
+    <string name="add_new_shoes">Add new shoes</string>
+    <string name="plus">+</string>
+>>>>>>> e9e2b615106b059b83d85b69d7e3c096581bbd69
 </resources>

@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase">
+          package="centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".model.welcomeCustomer" />
-        <activity android:name=".model.welcomeCsr" />
-        <activity android:name=".orderSubmit"></activity>
+        <activity android:name=".model.welcomeCustomer"/>
+        <activity android:name=".model.welcomeCsr"/>
+        <activity android:name=".CustomerSignUp"/>
+        <activity android:name=".CSRSignUp"/>
+        <activity android:name=".orderSubmit"/>
+        <activity android:name=".ShoesActivity">
+        </activity>
+        <activity android:name=".NewShoes">
+        </activity>
     </application>
 
 </manifest>

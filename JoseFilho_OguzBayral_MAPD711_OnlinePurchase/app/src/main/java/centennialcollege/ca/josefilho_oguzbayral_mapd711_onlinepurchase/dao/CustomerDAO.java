@@ -7,10 +7,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Customer;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class CustomerDAO extends SQLiteOpenHelper {
 
     public CustomerDAO(Context context) {
-        super(context, "OnlinePurchase", null, 1);
+        super(context, "OnlinePurchase", null, 3);
     }
 
     @Override
@@ -38,7 +41,7 @@ public class CustomerDAO extends SQLiteOpenHelper {
     public void insert(Customer customer) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues data = new ContentValues();
-        data.put("username", customer.getUserName());
+        data.put("userName", customer.getUserName());
         data.put("password", customer.getPassword());
         data.put("firstName", customer.getFirstName());
         data.put("lastName", customer.getLastName());
@@ -69,6 +72,30 @@ public class CustomerDAO extends SQLiteOpenHelper {
         }
         c.close();
         return customer;
+    }
+
+    public Collection<Customer> findAll() {
+        Collection<Customer> customers = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Customers c ";
+
+        Cursor c = db.rawQuery(sql, null);
+
+        Customer customer = null;
+        while (c.moveToNext()) {
+            customer = new Customer();
+            customer.setCustomerId(c.getLong(c.getColumnIndex("customerId")));
+            customer.setUserName(c.getString(c.getColumnIndex("userName")));
+            customer.setFirstName(c.getString(c.getColumnIndex("firstName")));
+            customer.setLastName(c.getString(c.getColumnIndex("lastName")));
+            customer.setAddress(c.getString(c.getColumnIndex("address")));
+            customer.setCity(c.getString(c.getColumnIndex("city")));
+            customer.setPostalCode(c.getString(c.getColumnIndex("postalCode")));
+            customers.add(customer);
+        }
+        c.close();
+        return customers;
     }
 }
 

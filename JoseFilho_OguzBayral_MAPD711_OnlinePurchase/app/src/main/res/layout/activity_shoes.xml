@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ShoesActivity"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical">
+
+
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoes_list">
+    </ListView>
+
+
+    <Button
+            android:text="@string/plus"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:id="@+id/btnSaveShoe"
+            android:gravity="center"
+            android:onClick="addShoes"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#ffffff"
+            android:elevation="6dp"
+            android:textSize="40sp"
+            android:background="@drawable/button_background"
+            android:stateListAnimator="@null"/>
+
+</RelativeLayout>

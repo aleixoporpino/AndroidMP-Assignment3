@@ -1,14 +1,18 @@
 package centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Csr;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class CsrDAO extends SQLiteOpenHelper {
     public CsrDAO(Context context) {
-        super(context, "OnlinePurchase", null, 1);
+        super(context, "OnlinePurchase", null, 3);
     }
 
     @Override
@@ -30,6 +34,16 @@ public class CsrDAO extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void insert(Csr csr) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues data = new ContentValues();
+        data.put("userName", csr.getUserName());
+        data.put("password", csr.getPassword());
+        data.put("firstName", csr.getFirstName());
+        data.put("lastName", csr.getLastName());
+        db.insert("Csr", null, data);
+    }
+
 
     public Csr login(String userName, String password) {
         SQLiteDatabase db = getReadableDatabase();
@@ -49,5 +63,26 @@ public class CsrDAO extends SQLiteOpenHelper {
         }
         c.close();
         return csr;
+    }
+
+    public Collection<Csr> findAll() {
+        Collection<Csr> csrs = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Csr c ";
+
+        Cursor c = db.rawQuery(sql, null);
+
+        Csr csr = null;
+        while (c.moveToNext()) {
+            csr = new Csr();
+            csr.setEmployeeId(c.getLong(c.getColumnIndex("employeeId")));
+            csr.setUserName(c.getString(c.getColumnIndex("userName")));
+            csr.setFirstName(c.getString(c.getColumnIndex("firstName")));
+            csr.setLastName(c.getString(c.getColumnIndex("lastName")));
+            csrs.add(csr);
+        }
+        c.close();
+        return csrs;
     }
 }
