@@ -2,13 +2,18 @@ package centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Customer;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Shoes;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class ShoesDAO extends SQLiteOpenHelper {
     public ShoesDAO(Context context) {
-        super(context, "OnlinePurchase", null, 1);
+        super(context, "OnlinePurchase", null, 3);
     }
 
     @Override
@@ -58,5 +63,27 @@ public class ShoesDAO extends SQLiteOpenHelper {
     public void remove(Long id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("Shoes", "itemId = ?", new String[]{id.toString()});
+    }
+
+    public Collection<Shoes> findAll() {
+        Collection<Shoes> shoes = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Shoes c ";
+
+        Cursor c = db.rawQuery(sql, null);
+
+        Shoes shoe = null;
+        while (c.moveToNext()) {
+            shoe = new Shoes();
+            shoe.setPrice(c.getDouble(c.getColumnIndex("price")));
+            shoe.setItemName(c.getString(c.getColumnIndex("itemName")));
+            shoe.setCategory(c.getString(c.getColumnIndex("category")));
+            shoe.setItemId(c.getLong(c.getColumnIndex("itemId")));
+            shoe.setShoeSize(c.getDouble(c.getColumnIndex("shoeSize")));
+            shoes.add(shoe);
+        }
+        c.close();
+        return shoes;
     }
 }

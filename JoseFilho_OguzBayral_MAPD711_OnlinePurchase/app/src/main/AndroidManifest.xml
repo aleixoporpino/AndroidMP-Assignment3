@@ -21,6 +21,10 @@
         <activity android:name=".CustomerSignUp"/>
         <activity android:name=".CSRSignUp"/>
         <activity android:name=".orderSubmit"/>
+        <activity android:name=".ShoesActivity">
+        </activity>
+        <activity android:name=".NewShoes">
+        </activity>
     </application>
 
 </manifest>

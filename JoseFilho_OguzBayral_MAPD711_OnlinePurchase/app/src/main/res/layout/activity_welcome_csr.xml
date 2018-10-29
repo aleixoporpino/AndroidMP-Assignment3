@@ -8,8 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="1"
-
-    tools:context=".model.welcomeCustomer"
+    tools:context=".model.welcomeCsr"
     android:background="@android:color/holo_blue_light">
 
     <!--Welcome Message -->
@@ -63,5 +62,17 @@
         android:textSize="20dp"
         />
 
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+        <Button
+                android:text="Shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSaveShoe"
+                android:onClick="clickShoes"/>
+    </TableRow>
 
 </TableLayout>

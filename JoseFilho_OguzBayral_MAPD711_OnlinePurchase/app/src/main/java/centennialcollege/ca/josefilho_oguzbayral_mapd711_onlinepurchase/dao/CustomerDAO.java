@@ -13,7 +13,7 @@ import java.util.Collection;
 public class CustomerDAO extends SQLiteOpenHelper {
 
     public CustomerDAO(Context context) {
-        super(context, "OnlinePurchase", null, 2);
+        super(context, "OnlinePurchase", null, 3);
     }
 
     @Override

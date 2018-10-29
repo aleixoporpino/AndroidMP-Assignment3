@@ -58,8 +58,6 @@
                 android:inputType="textPassword"
                 android:id="@+id/txtPassword"
                 android:textSize="17sp">
-
-            <requestFocus/>
         </EditText>
     </TableRow>
 

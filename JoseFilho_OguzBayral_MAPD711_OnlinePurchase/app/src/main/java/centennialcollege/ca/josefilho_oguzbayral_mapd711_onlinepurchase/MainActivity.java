@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         if (rbSelected.getText().toString().contains("Customer")) {
             Customer customer = customerDAO.login(fullName, password);
             if (customer != null && customer.getCustomerId() != null) {
-                editor.putString("username", fullName);
+                editor.putString("username", customer.getFirstName());
                 editor.apply();
                 //instantiate intent class
                 Intent intent = new Intent(MainActivity.this, welcomeCustomer.class);
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (rbSelected.getText().toString().contains("CSR")) {
             Csr csr = csrDAO.login(fullName, password);
             if (csr != null && csr.getEmployeeId() != null) {
-                editor.putString("username", fullName);
+                editor.putString("username", csr.getFirstName());
                 editor.apply();
                 //instantiate intent class
                 Intent intent = new Intent(MainActivity.this, welcomeCsr.class);

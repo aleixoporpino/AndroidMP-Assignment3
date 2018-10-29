@@ -107,7 +107,6 @@
                 android:inputType="textPassword"
                 android:text=""
                 android:layout_marginLeft="50px">
-            <requestFocus />
         </EditText>
     </TableRow>
 

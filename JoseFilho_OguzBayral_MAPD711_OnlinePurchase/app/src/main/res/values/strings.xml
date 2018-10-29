@@ -26,4 +26,11 @@
     <string name="csr_sign_up">CSR sign up</string>
     <string name="orders">Orders to Deliver</string>
     <string name="orderdetails">Your Order Details</string>
+    <string name="name">Name:</string>
+    <string name="category">Category:</string>
+    <string name="size">Size:</string>
+    <string name="price">Price:</string>
+    <string name="save">Save</string>
+    <string name="add_new_shoes">Add new shoes</string>
+    <string name="plus">+</string>
 </resources>
