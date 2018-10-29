@@ -51,6 +51,6 @@ public class Shoes implements Serializable {
 
     @Override
     public String toString() {
-        return itemName;
+        return itemName + " - $" + price;
     }
 }

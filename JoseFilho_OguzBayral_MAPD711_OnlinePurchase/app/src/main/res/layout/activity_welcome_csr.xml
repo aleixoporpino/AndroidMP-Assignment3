@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="1"
-    tools:context=".model.welcomeCsr"
+    tools:context=".WelcomeCsr"
     android:background="@android:color/holo_blue_light">
 
     <!--Welcome Message -->

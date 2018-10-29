@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:stretchColumns="1"
 
-    tools:context=".model.welcomeCustomer"
+    tools:context=".WelcomeCustomer"
     android:background="@android:color/holo_blue_light">
 
     <!--Welcome Message -->

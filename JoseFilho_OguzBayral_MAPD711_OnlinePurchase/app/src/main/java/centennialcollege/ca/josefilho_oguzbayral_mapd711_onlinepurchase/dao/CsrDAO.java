@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CsrDAO extends SQLiteOpenHelper {
     public CsrDAO(Context context) {
-        super(context, "OnlinePurchase", null, 4);
+        super(context, "OnlinePurchase", null, 6);
     }
 
     @Override

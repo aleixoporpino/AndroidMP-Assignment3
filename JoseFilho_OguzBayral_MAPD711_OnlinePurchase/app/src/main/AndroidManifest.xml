@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".model.welcomeCustomer"/>
-        <activity android:name=".model.welcomeCsr"/>
+        <activity android:name=".WelcomeCustomer"/>
+        <activity android:name=".WelcomeCsr"/>
         <activity android:name=".CustomerSignUp"/>
         <activity android:name=".CSRSignUp"/>
         <activity android:name=".orderSubmit"/>
@@ -28,6 +28,12 @@
         <activity android:name=".OrdersActivity">
         </activity>
         <activity android:name=".EditOrderActivity">
+        </activity>
+        <activity android:name=".CustomerOrderActivity">
+        </activity>
+        <activity android:name=".DetailsCustomerOrderActivity">
+        </activity>
+        <activity android:name=".CustomerNewOrderAcitivity">
         </activity>
     </application>
 

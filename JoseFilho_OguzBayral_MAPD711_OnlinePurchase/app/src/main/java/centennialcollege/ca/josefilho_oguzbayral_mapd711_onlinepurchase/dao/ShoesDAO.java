@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ShoesDAO extends SQLiteOpenHelper {
     public ShoesDAO(Context context) {
-        super(context, "OnlinePurchase", null, 4);
+        super(context, "OnlinePurchase", null, 6);
     }
 
     @Override
@@ -97,6 +97,29 @@ public class ShoesDAO extends SQLiteOpenHelper {
 
         Cursor c = db.rawQuery(sql, new String[]{shoesId.toString()});
 
+        loadShoesByCursor(shoesList, c);
+        c.close();
+        if (!shoesList.isEmpty()) return shoesList.get(0);
+        return null;
+    }
+
+    public List<Shoes> findByShoesCategory(String type) {
+        List<Shoes> shoesList = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Shoes c " +
+                "WHERE c.category = ?";
+
+        Cursor c = db.rawQuery(sql, new String[]{type});
+
+        loadShoesByCursor(shoesList, c);
+        c.close();
+        if (!shoesList.isEmpty()) return shoesList;
+        return null;
+
+    }
+
+    private void loadShoesByCursor(List<Shoes> shoesList, Cursor c) {
         while (c.moveToNext()) {
             Shoes shoes = new Shoes();
             shoes.setShoeSize(c.getDouble(c.getColumnIndex("shoeSize")));
@@ -106,8 +129,21 @@ public class ShoesDAO extends SQLiteOpenHelper {
             shoes.setPrice(c.getDouble(c.getColumnIndex("price")));
             shoesList.add(shoes);
         }
+    }
+
+    public List<Shoes> findByShoesCategoryAndSize(String type, String size) {
+        List<Shoes> shoesList = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Shoes c " +
+                "WHERE c.category = ? and c.shoeSize = ? ";
+
+        Cursor c = db.rawQuery(sql, new String[]{type, size});
+
+        loadShoesByCursor(shoesList, c);
         c.close();
-        if (!shoesList.isEmpty()) return shoesList.get(0);
+        if (!shoesList.isEmpty()) return shoesList;
         return null;
+
     }
 }

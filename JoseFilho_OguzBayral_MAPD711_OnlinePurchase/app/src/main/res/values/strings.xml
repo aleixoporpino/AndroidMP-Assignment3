@@ -39,4 +39,10 @@
     <string name="status">Status:</string>
     <string name="quantity">Quantity:</string>
     <string name="item_name">Item name:</string>
+    <string name="shoes_type">Shoes type:</string>
+    <string name="dear">Dear,</string>
+    <string name="available_shoes">Available Shoes</string>
+    <string name="shoes_size">Shoes size:</string>
+    <string name="your_orders">Your orders</string>
+    <string name="new_order">New Order</string>
 </resources>

@@ -14,7 +14,7 @@ import java.util.Collection;
 
 public class OrderDAO extends SQLiteOpenHelper {
     public OrderDAO(Context context) {
-        super(context, "OnlinePurchase", null, 4);
+        super(context, "OnlinePurchase", null, 6);
     }
 
     @Override
@@ -59,26 +59,22 @@ public class OrderDAO extends SQLiteOpenHelper {
     }
 
     public void insert(Order order) {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(order.getOrderDate());
         SQLiteDatabase db = getWritableDatabase();
         ContentValues data = new ContentValues();
         data.put("customerId", order.getCustomerId());
         data.put("itemId", order.getItemId());
-        data.put("orderDate", date);
+        data.put("orderDate", order.getOrderDate());
         data.put("quantity", order.getQuantity());
         data.put("status", order.getStatus());
         db.insert("Orders", null, data);
     }
 
     public void update(Order order) {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(order.getOrderDate());
         SQLiteDatabase db = getWritableDatabase();
         ContentValues data = new ContentValues();
         data.put("customerId", order.getCustomerId());
         data.put("itemId", order.getItemId());
-        data.put("orderDate", date);
+        data.put("orderDate", order.getOrderDate());
         data.put("quantity", order.getQuantity());
         data.put("status", order.getStatus());
         db.update("Orders", data, "orderId = ?", new String[]{order.getOrderId().toString()});

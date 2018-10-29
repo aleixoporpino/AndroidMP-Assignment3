@@ -14,8 +14,6 @@ import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.CsrD
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.CustomerDAO;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Csr;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Customer;
-import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.welcomeCsr;
-import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.welcomeCustomer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View v) {
+
         //Intent intent;
         EditText etFullName = findViewById(R.id.r1editText);
         EditText etPassword = findViewById(R.id.r2editText);
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString("userid", customer.getCustomerId().toString());
                 editor.apply();
                 //instantiate intent class
-                Intent intent = new Intent(MainActivity.this, welcomeCustomer.class);
+                Intent intent = new Intent(MainActivity.this, WelcomeCustomer.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(MainActivity.this, "Invalid login or password", Toast.LENGTH_LONG).show();
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString("userid", csr.getEmployeeId().toString());
                 editor.apply();
                 //instantiate intent class
-                Intent intent = new Intent(MainActivity.this, welcomeCsr.class);
+                Intent intent = new Intent(MainActivity.this, WelcomeCsr.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(MainActivity.this, "Invalid login or password", Toast.LENGTH_LONG).show();

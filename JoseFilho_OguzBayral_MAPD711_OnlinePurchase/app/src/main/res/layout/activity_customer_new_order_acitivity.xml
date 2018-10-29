@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TableLayout declaration-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/tableLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:stretchColumns="1"
+             tools:context=".CustomerNewOrderAcitivity"
+             android:background="@android:color/holo_blue_light">
+
+    <!--Welcome Message -->
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:scaleY="0.9"
+            android:src="@drawable/shoplogo"
+            android:layout_height="150dp"/>
+
+
+
+    <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/new_order"
+            android:textSize="20sp"/>
+
+
+    <TableRow
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@string/shoes_type"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewShoesType"
+                android:textSize="17sp"/>
+
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerShoesType"/>
+
+    </TableRow>
+
+    <TableRow
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@string/shoes_size"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewShoesSize"
+                android:textSize="17sp"/>
+
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerShoesSize"/>
+
+    </TableRow>
+
+    <TableRow
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Quantity:"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtViewQuantity"
+                android:textSize="17sp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:id="@+id/txtQuantity"
+                android:textSize="17sp"/>
+
+    </TableRow>
+
+    <TextView
+            android:text="@string/available_shoes"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/customer_shoes_list">
+    </ListView>
+
+    <TableRow
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="50px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </TableRow>
+
+</TableLayout>

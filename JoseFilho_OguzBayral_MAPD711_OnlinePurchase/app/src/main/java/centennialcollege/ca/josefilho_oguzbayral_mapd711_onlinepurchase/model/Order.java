@@ -1,7 +1,6 @@
 package centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Order implements Serializable {
     private Long orderId;

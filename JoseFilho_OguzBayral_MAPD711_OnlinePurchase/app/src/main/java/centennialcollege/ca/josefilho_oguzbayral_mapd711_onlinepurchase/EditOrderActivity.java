@@ -3,10 +3,12 @@ package centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.CustomerDAO;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.OrderDAO;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.ShoesDAO;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Customer;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Order;
@@ -30,7 +32,7 @@ public class EditOrderActivity extends AppCompatActivity {
         itemName = findViewById(R.id.txtItemName);
         orderDate = findViewById(R.id.txtOrderDate);
         quantity = findViewById(R.id.txtQuantity);
-        spinnerStatus = findViewById(R.id.spinnerCategory);
+        spinnerStatus = findViewById(R.id.spinnerStatusEditOrder);
 
         // Create a adapter to the status type spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -38,6 +40,7 @@ public class EditOrderActivity extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerStatus.setAdapter(adapter);
+
 
         Intent intent = getIntent();
         order = (Order) intent.getSerializableExtra("order");
@@ -49,12 +52,20 @@ public class EditOrderActivity extends AppCompatActivity {
 
         Shoes shoe = new Shoes();
         ShoesDAO shoeDAO = new ShoesDAO(this);
-        shoe = shoeDAO.findById(shoe.getItemId());
+        shoe = shoeDAO.findById(order.getItemId());
         shoeDAO.close();
         itemName.setText(shoe.getItemName());
 
         orderDate.setText(order.getOrderDate());
-        quantity.setText(order.getQuantity());
+        quantity.setText(order.getQuantity()+"");
         spinnerStatus.setPrompt(order.getStatus());
+    }
+
+    public void clickSave(View view) {
+        OrderDAO orderDAO = new OrderDAO(this);
+        order.setStatus(spinnerStatus.getSelectedItem().toString());
+        orderDAO.update(order);
+        Intent intent = new Intent(EditOrderActivity.this, OrdersActivity.class);
+        startActivity(intent);
     }
 }

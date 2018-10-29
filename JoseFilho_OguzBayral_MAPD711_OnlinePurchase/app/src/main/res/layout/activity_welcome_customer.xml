@@ -2,211 +2,70 @@
 
 <!-- TableLayout declaration-->
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tableLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:stretchColumns="1"
-
-    tools:context=".model.welcomeCustomer"
-    android:background="@android:color/holo_blue_light">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/tableLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:stretchColumns="1"
+             tools:context=".WelcomeCustomer"
+             android:background="@android:color/holo_blue_light">
 
     <!--Welcome Message -->
-
     <ImageView
-        android:layout_width="354dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:scaleY="0.9"
-        android:src="@drawable/shoplogo" />
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:scaleY="0.9"
+            android:src="@drawable/shoplogo"
+            android:layout_height="150dp"/>
 
 
     <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/r1textView"
-            android:text="Dear, "
-            android:textSize="20sp"
-            android:layout_marginLeft="70px" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/userFullName"
-            android:ems="10"
-            android:textSize="20sp"
-            android:text=""/>
+                android:id="@+id/r1textView"
+                android:text="@string/dear"
+                android:textSize="20sp"
+                android:layout_marginStart="35dp"/>
+
+        <TextView
+                android:id="@+id/userFullName"
+                android:ems="10"
+                android:textSize="20sp"
+                android:text=""/>
 
     </TableRow>
 
 
     <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/welcome"
-        android:textSize="20dp" />
-
-
-    <TextView
-        android:id="@+id/shoes"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Our Shoe Types:"
-        android:textSize="20dp"
-        />
-
-
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/menshoe" />
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:adjustViewBounds="true"
-            android:layout_marginRight="20dp"
-            android:scaleX="0.8"
-            android:src="@drawable/womenshoe" />
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/kidshoe" />
-
-    </TableRow>
-
-
-    <RadioGroup
-        android:id="@+id/radioGroupshoe"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="40px">
-
-
-        <RadioButton
-            android:id="@+id/radioMen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/men"
-            android:tag="men"
-            android:onClick="shoeTypeClick"/>
-
-        <RadioButton
-            android:id="@+id/radioWomen"
-            android:layout_marginLeft="150px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/women"
-            android:tag="women"
-            android:onClick="shoeTypeClick"/>
-
-        <RadioButton
-            android:id="@+id/radioKid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/kid"
-            android:layout_marginLeft="160px"
-            android:tag="kid"
-            android:onClick="shoeTypeClick"
-        />
-
-    </RadioGroup>
-
-
-    <TextView
-        android:id="@+id/selectDetails"
-        android:layout_marginTop="10px"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/selectDetails"
-        android:textSize="20dp"
-    />
-
-
-
-    <RadioGroup
-        android:id="@+id/radioGroupsize"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="40px">
-
-
-        <RadioButton
-            android:id="@+id/radioSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/small"
-            android:tag="small"
-            android:onClick="shoeSizeClick"
-            />
-
-        <RadioButton
-            android:id="@+id/radioMedium"
-            android:layout_marginLeft="150px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/medium"
-            android:tag="medium"
-            android:onClick="shoeSizeClick"/>
-
-        <RadioButton
-            android:id="@+id/radioLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/large"
-            android:layout_marginLeft="110px"
-            android:tag="large"
-            android:onClick="shoeSizeClick"/>
-
-    </RadioGroup>
-    <TableRow
-        android:gravity="center_horizontal"
-        android:layout_marginVertical="50px"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/quantity"
+            android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Quantity"
-            android:textSize="20dp"
-            />
+            android:text="@string/welcome"
+            android:textSize="20sp"/>
 
-        <EditText
-            android:id="@+id/etQuantity"
-            android:text=""
-            android:inputType="number"
-            android:digits="0123456789"
-        />
 
-</TableRow>
 
-<TableRow
-        android:gravity="center_horizontal"
-        android:layout_marginVertical="50px"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
         <Button
-            android:id="@+id/button1"
-            android:text="@string/order"
-            android:onClick="order"
-        />
+                android:text="@string/orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnOrders"
+                android:onClick="clickOrders"/>
+
+        <Button
+                android:text="@string/new_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSaveShoe"
+                android:onClick="clickNewOrder"/>
     </TableRow>
-
-
 
 </TableLayout>
