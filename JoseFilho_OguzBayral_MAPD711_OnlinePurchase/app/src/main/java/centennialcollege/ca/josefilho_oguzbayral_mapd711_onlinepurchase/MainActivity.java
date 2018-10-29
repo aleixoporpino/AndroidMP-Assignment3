@@ -12,8 +12,12 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.CsrDAO;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.CustomerDAO;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.OrderDAO;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.dao.ShoesDAO;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Csr;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Customer;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Order;
+import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Shoes;
 
 public class MainActivity extends AppCompatActivity {
 

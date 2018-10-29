@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ShoesDAO extends SQLiteOpenHelper {
     public ShoesDAO(Context context) {
-        super(context, "OnlinePurchase", null, 6);
+        super(context, "OnlinePurchase", null, 9);
     }
 
     @Override

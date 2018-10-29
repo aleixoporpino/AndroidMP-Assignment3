@@ -14,7 +14,7 @@ import java.util.Collection;
 
 public class OrderDAO extends SQLiteOpenHelper {
     public OrderDAO(Context context) {
-        super(context, "OnlinePurchase", null, 6);
+        super(context, "OnlinePurchase", null, 9);
     }
 
     @Override
