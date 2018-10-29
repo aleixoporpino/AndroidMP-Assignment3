@@ -32,11 +32,10 @@
             android:layout_marginLeft="70px" />
 
         <TextView
-            android:id="@+id/userFullName"
-            android:ems="10"
-            android:inputType="text"
-            android:text=""
-            android:layout_marginLeft="50px" />
+                android:id="@+id/userFullName"
+                android:ems="10"
+                android:textSize="20sp"
+                android:text=""/>
 
     </TableRow>
 

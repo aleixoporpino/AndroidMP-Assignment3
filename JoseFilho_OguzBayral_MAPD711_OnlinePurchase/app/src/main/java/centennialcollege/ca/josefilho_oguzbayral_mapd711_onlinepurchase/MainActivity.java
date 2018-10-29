@@ -17,8 +17,6 @@ import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Cu
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.welcomeCsr;
 import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.welcomeCustomer;
 
-import java.util.Collection;
-
 public class MainActivity extends AppCompatActivity {
 
     private CsrDAO csrDAO = new CsrDAO(this);
@@ -49,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             Customer customer = customerDAO.login(fullName, password);
             if (customer != null && customer.getCustomerId() != null) {
                 editor.putString("username", customer.getFirstName());
+                editor.putString("userid", customer.getCustomerId().toString());
                 editor.apply();
                 //instantiate intent class
                 Intent intent = new Intent(MainActivity.this, welcomeCustomer.class);
@@ -64,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             Csr csr = csrDAO.login(fullName, password);
             if (csr != null && csr.getEmployeeId() != null) {
                 editor.putString("username", csr.getFirstName());
+                editor.putString("userid", csr.getEmployeeId().toString());
                 editor.apply();
                 //instantiate intent class
                 Intent intent = new Intent(MainActivity.this, welcomeCsr.class);
