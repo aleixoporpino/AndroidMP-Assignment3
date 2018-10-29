@@ -52,23 +52,20 @@
     />
 
 
-    <TextView
-        android:id="@+id/orders"
-        android:layout_marginTop="30px"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/orders"
-        android:textSize="20dp"
-        />
-
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal">
 
         <Button
-                android:text="Shoes"
+                android:text="@string/orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnOrders"
+                android:onClick="clickOrders"/>
+
+        <Button
+                android:text="@string/shoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnSaveShoe"

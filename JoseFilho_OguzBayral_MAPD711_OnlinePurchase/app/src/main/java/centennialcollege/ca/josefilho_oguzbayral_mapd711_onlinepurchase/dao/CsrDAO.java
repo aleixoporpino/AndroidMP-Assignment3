@@ -9,10 +9,11 @@ import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Cs
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class CsrDAO extends SQLiteOpenHelper {
     public CsrDAO(Context context) {
-        super(context, "OnlinePurchase", null, 3);
+        super(context, "OnlinePurchase", null, 4);
     }
 
     @Override
@@ -46,6 +47,7 @@ public class CsrDAO extends SQLiteOpenHelper {
 
 
     public Csr login(String userName, String password) {
+        List<Csr> csrs = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         String sql = "SELECT * FROM Csr c " +
@@ -53,16 +55,17 @@ public class CsrDAO extends SQLiteOpenHelper {
 
         Cursor c = db.rawQuery(sql, new String[]{userName, password});
 
-        Csr csr = null;
         while (c.moveToNext()) {
-            csr = new Csr();
+            Csr csr = new Csr();
             csr.setEmployeeId(c.getLong(c.getColumnIndex("employeeId")));
             csr.setUserName(c.getString(c.getColumnIndex("userName")));
             csr.setFirstName(c.getString(c.getColumnIndex("firstName")));
             csr.setLastName(c.getString(c.getColumnIndex("lastName")));
+            csrs.add(csr);
         }
         c.close();
-        return csr;
+        if (!csrs.isEmpty()) return csrs.get(0);
+        return null;
     }
 
     public Collection<Csr> findAll() {

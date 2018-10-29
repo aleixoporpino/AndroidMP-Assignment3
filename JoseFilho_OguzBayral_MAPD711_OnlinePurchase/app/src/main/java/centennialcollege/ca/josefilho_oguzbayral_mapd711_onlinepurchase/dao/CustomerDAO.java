@@ -9,11 +9,12 @@ import centennialcollege.ca.josefilho_oguzbayral_mapd711_onlinepurchase.model.Cu
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class CustomerDAO extends SQLiteOpenHelper {
 
     public CustomerDAO(Context context) {
-        super(context, "OnlinePurchase", null, 3);
+        super(context, "OnlinePurchase", null, 4);
     }
 
     @Override
@@ -52,6 +53,7 @@ public class CustomerDAO extends SQLiteOpenHelper {
     }
 
     public Customer login(String userName, String password) {
+        List<Customer> customers = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         String sql = "SELECT * FROM Customers c " +
@@ -59,9 +61,8 @@ public class CustomerDAO extends SQLiteOpenHelper {
 
         Cursor c = db.rawQuery(sql, new String[]{userName, password});
 
-        Customer customer = null;
         while (c.moveToNext()) {
-            customer = new Customer();
+            Customer customer = new Customer();
             customer.setCustomerId(c.getLong(c.getColumnIndex("customerId")));
             customer.setUserName(c.getString(c.getColumnIndex("userName")));
             customer.setFirstName(c.getString(c.getColumnIndex("firstName")));
@@ -69,9 +70,11 @@ public class CustomerDAO extends SQLiteOpenHelper {
             customer.setAddress(c.getString(c.getColumnIndex("address")));
             customer.setCity(c.getString(c.getColumnIndex("city")));
             customer.setPostalCode(c.getString(c.getColumnIndex("postalCode")));
+            customers.add(customer);
         }
         c.close();
-        return customer;
+        if (!customers.isEmpty()) return customers.get(0);
+        return null;
     }
 
     public Collection<Customer> findAll() {
@@ -96,6 +99,31 @@ public class CustomerDAO extends SQLiteOpenHelper {
         }
         c.close();
         return customers;
+    }
+
+    public Customer findById(Long customerId) {
+        List<Customer> customers = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sql = "SELECT * FROM Customers c " +
+                "WHERE c.customerId = ?";
+
+        Cursor c = db.rawQuery(sql, new String[]{customerId.toString()});
+
+        while (c.moveToNext()) {
+            Customer customer = new Customer();
+            customer.setCustomerId(c.getLong(c.getColumnIndex("customerId")));
+            customer.setUserName(c.getString(c.getColumnIndex("userName")));
+            customer.setFirstName(c.getString(c.getColumnIndex("firstName")));
+            customer.setLastName(c.getString(c.getColumnIndex("lastName")));
+            customer.setAddress(c.getString(c.getColumnIndex("address")));
+            customer.setCity(c.getString(c.getColumnIndex("city")));
+            customer.setPostalCode(c.getString(c.getColumnIndex("postalCode")));
+            customers.add(customer);
+        }
+        c.close();
+        if (!customers.isEmpty()) return customers.get(0);
+        return null;
     }
 }
 

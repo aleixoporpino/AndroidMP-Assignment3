@@ -33,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rg = findViewById(R.id.radioGroup);
         loginType = rg.getCheckedRadioButtonId();
-
-
-        Collection<Customer> customers = customerDAO.findAll();
-        System.out.println(customers);
     }
 
     public void login(View v) {
@@ -47,11 +43,6 @@ public class MainActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
         SharedPreferences sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-
-        Collection<Customer> customers = customerDAO.findAll();
-        System.out.println(customers);
-        Collection<Csr> csrs = csrDAO.findAll();
-        System.out.println(csrs);
 
         RadioButton rbSelected = findViewById(loginType);
         if (rbSelected.getText().toString().contains("Customer")) {

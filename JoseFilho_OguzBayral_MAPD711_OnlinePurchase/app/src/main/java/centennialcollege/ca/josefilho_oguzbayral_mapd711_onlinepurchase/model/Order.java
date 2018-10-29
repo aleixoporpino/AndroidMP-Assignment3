@@ -58,4 +58,9 @@ public class Order implements Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return orderDate + " - Qty: " + quantity + " - " + status;
+    }
 }
