@@ -16,4 +16,7 @@
     <string name="selectDetails">Select Size and Quantity</string>
     <string name="orders">Orders to Deliver</string>
     <string name="orderdetails">Your Order Details</string>
+    <string name="pieces">pieces of</string>
+    <string name="size">size</string>
+    <string name="shoe">shoe</string>
 </resources>

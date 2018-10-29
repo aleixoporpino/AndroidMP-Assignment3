@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -23,9 +25,12 @@ public class welcomeCustomer extends AppCompatActivity {
     CustomerDAO customerDAO;
     RadioGroup shoeType;
     RadioGroup shoeSize;
+    RadioButton selectedShoeType;
+    RadioButton selectedShoeSize;
+    String typeTag;
+    String sizeTag;
 
-    int shoe;
-    int size;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,44 +50,50 @@ public class welcomeCustomer extends AppCompatActivity {
 
     public void order(View v)
     {
+        EditText shoeQuantity =  findViewById(R.id.etQuantity);
+        typeTag = shoeTypeClick(null);
+        sizeTag = shoeSizeClick(null);
 
         Intent intent=new Intent(welcomeCustomer.this, orderSubmit.class);
+        intent.putExtra("quantity",shoeQuantity.getText().toString());
         SharedPreferences sharedPref = getSharedPreferences("orderInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        if(shoe%2 == 0){
+
+        if(typeTag.equals("men")){
             editor.putString("shoeType","Mens Shoe");
-
         }
-        if(shoe%2 == 1){
+        if(typeTag.equals("women")){
             editor.putString("shoeType","Womens Shoe");
-
         }
-        if(size%2 == 0){
+        if(typeTag.equals("kid")){
+            editor.putString("shoeType","Kids Shoe");
+        }
+        if(sizeTag.equals("small")){
             editor.putString("shoeSize","Small");
-
         }
-        if(size%2 == 0){
+        if(sizeTag.equals("medium")){
             editor.putString("shoeSize","Medium");
-
         }
-        if(size%2 == 0){
+        if(sizeTag.equals("large")){
             editor.putString("shoeSize","Large");
         }
         editor.apply();
         startActivity(intent);
     }
 
-    public void shoeTypeClick(View v){
+    public String shoeTypeClick(View v){
         int radiobuttonId = shoeType.getCheckedRadioButtonId();
-        shoe = radiobuttonId;
-        Log.d("SHOE", "value: " + shoe);
+        selectedShoeType = (RadioButton) findViewById(radiobuttonId);
+        String typeTag = selectedShoeType.getTag().toString();
+        return typeTag;
+
 
     }
-    public void shoeSizeClick(View v){
+    public String shoeSizeClick(View v){
         int radiobuttonId = shoeSize.getCheckedRadioButtonId();
-        size = radiobuttonId;
-        Log.d("SIZE", "value: " + size);
-
+        selectedShoeSize = (RadioButton) findViewById(radiobuttonId);
+        String sizeTag = selectedShoeSize.getTag().toString();
+        return sizeTag;
     }
 
 }
