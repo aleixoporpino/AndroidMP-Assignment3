@@ -12,27 +12,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class ShoesDAO extends SQLiteOpenHelper {
+public class ShoesDAO extends DbHelper {
+
+
     public ShoesDAO(Context context) {
-        super(context, "OnlinePurchase", null, 9);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Shoes (" +
-                " itemId INTEGER PRIMARY KEY, " +
-                " itemName TEXT NOT NULL, " +
-                " category TEXT NOT NULL, " +
-                " shoeSize DOUBLE NOT NULL, " +
-                " price DOUBLE NOT NULL);";
-        db.execSQL(sql);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS Shoes;";
-        db.execSQL(sql);
-        onCreate(db);
+        super(context);
     }
 
     public Shoes insert(Shoes shoes) {

@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:id="@+id/txtQuantity"
+                android:id="@+id/txtCustomerQuantity"
                 android:textSize="17sp"/>
 
     </TableRow>

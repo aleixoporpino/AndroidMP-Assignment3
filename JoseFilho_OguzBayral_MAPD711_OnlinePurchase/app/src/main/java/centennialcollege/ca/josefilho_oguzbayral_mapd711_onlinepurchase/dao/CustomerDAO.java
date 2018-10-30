@@ -11,32 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomerDAO extends SQLiteOpenHelper {
+public class CustomerDAO extends DbHelper {
+
 
     public CustomerDAO(Context context) {
-        super(context, "OnlinePurchase", null, 9);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Customers (" +
-                " customerId INTEGER PRIMARY KEY, " +
-                " userName TEXT NOT NULL, " +
-                " password TEXT NOT NULL, " +
-                " firstName TEXT NOT NULL, " +
-                " lastName TEXT NOT NULL, " +
-                " address TEXT NOT NULL, " +
-                " city TEXT NOT NULL, " +
-                " postalCode TEXT NOT NULL);";
-        db.execSQL(sql);
-    }
-
-    // Temporary drop
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS Customers;";
-        db.execSQL(sql);
-        onCreate(db);
+        super(context);
     }
 
     public void insert(Customer customer) {

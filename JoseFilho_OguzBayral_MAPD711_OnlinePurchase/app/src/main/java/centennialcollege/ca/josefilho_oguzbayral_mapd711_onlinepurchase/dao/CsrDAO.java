@@ -11,28 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class CsrDAO extends SQLiteOpenHelper {
+public class CsrDAO extends DbHelper {
+
+
     public CsrDAO(Context context) {
-        super(context, "OnlinePurchase", null, 9);
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Csr (" +
-                " employeeId INTEGER PRIMARY KEY, " +
-                " userName TEXT NOT NULL, " +
-                " password TEXT NOT NULL, " +
-                " firstName TEXT NOT NULL, " +
-                " lastName TEXT NOT NULL);";
-
-        db.execSQL(sql);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS Csr;";
-        db.execSQL(sql);
-        onCreate(db);
+        super(context);
     }
 
     public void insert(Csr csr) {
@@ -43,6 +26,7 @@ public class CsrDAO extends SQLiteOpenHelper {
         data.put("firstName", csr.getFirstName());
         data.put("lastName", csr.getLastName());
         db.insert("Csr", null, data);
+        db.close();
     }
 
 

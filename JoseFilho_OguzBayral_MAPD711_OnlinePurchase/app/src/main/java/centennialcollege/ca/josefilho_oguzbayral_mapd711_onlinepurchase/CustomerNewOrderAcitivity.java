@@ -47,7 +47,7 @@ public class CustomerNewOrderAcitivity extends AppCompatActivity {
         spinnerShoesType = findViewById(R.id.spinnerShoesType);
         spinnerShoesSize = findViewById(R.id.spinnerShoesSize);
         listViewShoes = findViewById(R.id.customer_shoes_list);
-        quantity = findViewById(R.id.txtQuantity);
+        quantity = findViewById(R.id.txtCustomerQuantity);
         // Create a adapter to the status type spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.category_array, android.R.layout.simple_spinner_dropdown_item);
@@ -64,7 +64,7 @@ public class CustomerNewOrderAcitivity extends AppCompatActivity {
             Shoes shoe = shoesDAO.findById(order.getItemId());
             spinnerShoesSize.setPrompt(shoe.getShoeSize().toString());
             spinnerShoesType.setPrompt(shoe.getCategory());
-            quantity.setText(order.getQuantity());
+            quantity.setText(order.getQuantity()+"");
         } else {
             quantity.setText("1");
         }
