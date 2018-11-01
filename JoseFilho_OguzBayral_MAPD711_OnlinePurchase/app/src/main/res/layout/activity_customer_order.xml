@@ -14,7 +14,7 @@
         android:id="@+id/shoes_in_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/shoes_in_order"
+        android:text="@string/your_orders"
         android:textSize="20sp"/>
 
 

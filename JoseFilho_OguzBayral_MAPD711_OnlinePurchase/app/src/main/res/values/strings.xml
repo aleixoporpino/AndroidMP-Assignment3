@@ -52,4 +52,7 @@
     <string name="shoes_in_shop"> Shoes in Happy Shop </string>
     <string name="pending_orders"> Pending Orders </string>
     <string name="welcome_to_happy_shopping">Welcome to Happy Shopping!</string>
+    <string name="customers_orders">Customer`s orders</string>
+    <string name="new_csr_sign_up">New CSR sign up</string>
+    <string name="your_orders">Your orders</string>
 </resources>
