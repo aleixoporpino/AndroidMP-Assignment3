@@ -46,4 +46,10 @@ public class CustomerOrderActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<Order>(this, android.R.layout.simple_list_item_1, orders);
         listView.setAdapter(adapter);
     }
+
+    public void back(View view) {
+        Intent intent = new Intent(CustomerOrderActivity.this, WelcomeCustomer.class);
+        startActivity(intent);
+    }
+
 }

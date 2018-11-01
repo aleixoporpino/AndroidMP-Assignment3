@@ -7,6 +7,23 @@
         tools:context=".NewShoes"
         android:background="@android:color/holo_blue_light">
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingBottom="7sp"
+        android:layout_marginStart="10sp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:text="@string/add_new_shoes"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_new_shoes"
+            android:textSize="20sp"/>
+
+    </TableRow>
+
 
     <TableRow
             android:layout_width="match_parent"
@@ -99,6 +116,15 @@
             android:gravity="center_horizontal">
 
         <Button
+            android:layout_gravity="center"
+            android:text="@string/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:onClick="back"/>
+
+        <Button
+                android:layout_gravity="center"
                 android:text="@string/save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

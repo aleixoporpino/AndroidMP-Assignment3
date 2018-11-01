@@ -45,4 +45,10 @@
     <string name="shoes_size">Shoes size:</string>
     <string name="your_orders">Your orders</string>
     <string name="new_order">New Order</string>
+    <string name="signout">Sign Out</string>
+    <string name="shoes_in_order">Shoes in Order</string>
+    <string name="back">Back</string>
+    <string name="backarrow"> ← </string>
+    <string name="shoes_in_shop"> Shoes in Happy Shop </string>
+    <string name="pending_orders"> Pending Orders </string>
 </resources>

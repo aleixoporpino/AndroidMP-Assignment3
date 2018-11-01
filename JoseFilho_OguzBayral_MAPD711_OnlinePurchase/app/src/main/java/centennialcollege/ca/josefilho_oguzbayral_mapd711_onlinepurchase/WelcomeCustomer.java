@@ -48,4 +48,10 @@ public class WelcomeCustomer extends AppCompatActivity {
         Intent intent = new Intent(WelcomeCustomer.this, CustomerNewOrderAcitivity.class);
         startActivity(intent);
     }
+
+    public void signOut(View view) {
+        Intent intent = new Intent(WelcomeCustomer.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

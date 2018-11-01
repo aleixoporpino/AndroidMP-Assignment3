@@ -8,6 +8,24 @@
         android:background="@android:color/holo_blue_light">
 
     <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingBottom="7sp"
+        android:layout_marginStart="10sp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:text="Edit Order"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editOrder"
+            android:textSize="20sp"/>
+
+    </TableRow>
+
+
+    <TableRow
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:paddingBottom="7sp"

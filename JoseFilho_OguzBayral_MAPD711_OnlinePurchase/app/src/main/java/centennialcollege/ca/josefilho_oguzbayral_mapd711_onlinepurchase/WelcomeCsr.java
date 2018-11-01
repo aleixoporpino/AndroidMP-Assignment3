@@ -31,4 +31,9 @@ public class WelcomeCsr extends AppCompatActivity {
         Intent intent = new Intent(WelcomeCsr.this, OrdersActivity.class);
         startActivity(intent);
     }
+
+    public void signOut(View view) {
+        Intent intent = new Intent(WelcomeCsr.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

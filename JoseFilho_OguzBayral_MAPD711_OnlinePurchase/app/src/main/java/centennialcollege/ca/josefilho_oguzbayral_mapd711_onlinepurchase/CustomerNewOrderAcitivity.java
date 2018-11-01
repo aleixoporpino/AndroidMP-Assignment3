@@ -62,7 +62,7 @@ public class CustomerNewOrderAcitivity extends AppCompatActivity {
         }
         if (order != null && order.getItemId() != null) {
             Shoes shoe = shoesDAO.findById(order.getItemId());
-            spinnerShoesSize.setPrompt(shoe.getShoeSize().toString());
+            spinnerShoesSize.setPrompt(shoe.getShoeSize().toString()+"");
             spinnerShoesType.setPrompt(shoe.getCategory());
             quantity.setText(order.getQuantity()+"");
         } else {
@@ -149,4 +149,10 @@ public class CustomerNewOrderAcitivity extends AppCompatActivity {
             }
         });
     }
+
+    public void back(View view) {
+        Intent intent = new Intent(CustomerNewOrderAcitivity.this, WelcomeCustomer.class);
+        startActivity(intent);
+    }
+
 }

@@ -83,4 +83,10 @@ public class NewShoes extends AppCompatActivity {
         }
 
     }
+    public void back(View view) {
+        Intent intent = new Intent(NewShoes.this, ShoesActivity.class);
+        startActivity(intent);
+    }
+
+
 }

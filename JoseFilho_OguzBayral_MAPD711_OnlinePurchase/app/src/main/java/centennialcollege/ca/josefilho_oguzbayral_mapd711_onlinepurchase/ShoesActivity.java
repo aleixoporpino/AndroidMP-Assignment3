@@ -53,6 +53,11 @@ public class ShoesActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void back(View view) {
+        Intent intent = new Intent(ShoesActivity.this, WelcomeCsr.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onResume() {
         super.onResume();

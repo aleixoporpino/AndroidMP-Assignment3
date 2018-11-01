@@ -51,6 +51,11 @@ public class OrdersActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
+    public void back(View view) {
+        Intent intent = new Intent(OrdersActivity.this, WelcomeCsr.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onResume() {
         super.onResume();

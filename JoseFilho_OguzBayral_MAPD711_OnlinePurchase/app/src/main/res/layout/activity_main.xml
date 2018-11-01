@@ -125,18 +125,21 @@
     </TableRow>
 
     <TableRow
-            android:gravity="center_horizontal"
+
             android:layout_marginVertical="50px"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp">
 
         <Button
+
                 android:id="@+id/signUpCostumer"
                 android:text="@string/customer_sign_up"
                 android:onClick="signUpCustomer"
                 />
 
         <Button
+                android:layout_gravity="center"
                 android:id="@+id/signUpCsr"
                 android:text="@string/csr_sign_up"
                 android:onClick="signUpCsr"

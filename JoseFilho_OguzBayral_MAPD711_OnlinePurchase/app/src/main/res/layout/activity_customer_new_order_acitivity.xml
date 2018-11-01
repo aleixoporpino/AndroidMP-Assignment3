@@ -10,14 +10,40 @@
              android:background="@android:color/holo_blue_light">
 
     <!--Welcome Message -->
-    <ImageView
+
+    <TableRow
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_gravity="center"
+            android:text="@string/backarrow"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:id="@+id/back"
+            android:gravity="center"
+            android:onClick="back"
+            android:layout_marginStart="-46dp"
+            android:layout_marginTop="-36dp"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:background="@drawable/button_background"
+            android:stateListAnimator="@null"
+        />
+
+
+        <ImageView
+            android:paddingEnd="80dp"
             android:layout_width="150dp"
             android:layout_gravity="center"
             android:scaleY="0.9"
             android:src="@drawable/shoplogo"
-            android:layout_height="150dp"/>
+            android:layout_height="150dp"
+        />
 
-
+</TableRow>
 
     <TextView
             android:id="@+id/welcome"
@@ -92,22 +118,24 @@
     </TableRow>
 
     <TextView
-            android:text="@string/available_shoes"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"/>
+        android:text="@string/available_shoes"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"/>
     <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/customer_shoes_list">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customer_shoes_list">
     </ListView>
 
-    <TableRow
-            android:gravity="center_horizontal"
-            android:layout_marginVertical="50px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-    </TableRow>
+
+
+
+
 
 </TableLayout>
+
+
+
+

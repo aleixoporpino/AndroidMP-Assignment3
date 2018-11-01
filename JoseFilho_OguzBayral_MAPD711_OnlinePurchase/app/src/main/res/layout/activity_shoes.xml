@@ -8,8 +8,19 @@
         android:background="@android:color/holo_blue_light"
         android:orientation="vertical">
 
+    <TextView
+        android:paddingStart="90dp"
+        android:id="@+id/shoes_in_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/shoes_in_shop"
+        android:textSize="20dp"
+    />
+
 
     <ListView
+            android:layout_marginTop="50px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/shoes_list">
@@ -23,7 +34,7 @@
             android:id="@+id/btnSaveShoe"
             android:gravity="center"
             android:onClick="addShoes"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
@@ -32,5 +43,22 @@
             android:textSize="40sp"
             android:background="@drawable/button_background"
             android:stateListAnimator="@null"/>
+
+    <Button
+        android:text="@string/backarrow"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/back"
+        android:gravity="center"
+        android:onClick="back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#ffffff"
+        android:elevation="6dp"
+        android:textSize="40sp"
+        android:background="@drawable/button_background"
+        android:stateListAnimator="@null"/>
 
 </RelativeLayout>
