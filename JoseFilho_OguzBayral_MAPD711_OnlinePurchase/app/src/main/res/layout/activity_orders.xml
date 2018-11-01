@@ -10,7 +10,9 @@
 
 
     <TextView
-        android:paddingStart="120dp"
+        android:paddingStart="15dp"
+        android:gravity="center"
+        android:layout_marginLeft="100dp"
         android:id="@+id/pending_orders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

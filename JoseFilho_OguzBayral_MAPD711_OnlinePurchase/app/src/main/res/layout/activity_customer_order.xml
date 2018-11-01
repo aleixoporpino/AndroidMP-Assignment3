@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:paddingStart="120dp"
+        android:paddingStart="140dp"
         android:id="@+id/shoes_in_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
