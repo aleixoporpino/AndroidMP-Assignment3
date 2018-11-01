@@ -35,13 +35,10 @@
 
 
         <ImageView
-            android:paddingEnd="80dp"
-            android:layout_width="150dp"
-            android:layout_gravity="center"
-            android:scaleY="0.9"
-            android:src="@drawable/shoplogo"
-            android:layout_height="150dp"
-        />
+                android:layout_width="354dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:src="@drawable/shoplogo"/>
 
 </TableRow>
 

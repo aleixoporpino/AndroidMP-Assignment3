@@ -14,7 +14,7 @@
 
     <ImageView
             android:layout_width="354dp"
-            android:layout_height="60dp"
+            android:layout_height="125dp"
             android:layout_gravity="center"
             android:src="@drawable/shoplogo"/>
 
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Welcome to Happy Shopping!"
+            android:text="@string/welcome_to_happy_shopping"
             android:textSize="20dp"/>
 
     <!-- Row declarations within the TableLayout.-->

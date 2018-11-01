@@ -14,11 +14,10 @@
     <!--Welcome Message -->
 
     <ImageView
-        android:layout_width="354dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:scaleY="0.9"
-        android:src="@drawable/shoplogo" />
+            android:layout_width="354dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:src="@drawable/shoplogo"/>
 
 
     <TableRow
